@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PONG));
             this.Field = new System.Windows.Forms.Panel();
+            this.GodModeLabel = new System.Windows.Forms.Label();
+            this.PausedLabel = new System.Windows.Forms.Label();
             this.ScoreTable = new System.Windows.Forms.Label();
             this.Stick = new System.Windows.Forms.TextBox();
             this.Ball = new System.Windows.Forms.PictureBox();
@@ -38,7 +40,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.Time = new System.Windows.Forms.Timer(this.components);
-            this.PausedLabel = new System.Windows.Forms.Label();
+            this.highScoreLabel = new System.Windows.Forms.Label();
             this.Field.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ball)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +48,8 @@
             // Field
             // 
             this.Field.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Field.Controls.Add(this.highScoreLabel);
+            this.Field.Controls.Add(this.GodModeLabel);
             this.Field.Controls.Add(this.PausedLabel);
             this.Field.Controls.Add(this.ScoreTable);
             this.Field.Controls.Add(this.Stick);
@@ -56,15 +60,37 @@
             this.Field.Size = new System.Drawing.Size(1484, 562);
             this.Field.TabIndex = 2;
             // 
+            // GodModeLabel
+            // 
+            this.GodModeLabel.AutoSize = true;
+            this.GodModeLabel.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GodModeLabel.ForeColor = System.Drawing.Color.Lime;
+            this.GodModeLabel.Location = new System.Drawing.Point(12, 94);
+            this.GodModeLabel.Name = "GodModeLabel";
+            this.GodModeLabel.Size = new System.Drawing.Size(335, 45);
+            this.GodModeLabel.TabIndex = 5;
+            this.GodModeLabel.Text = "GOD MODE : ON";
+            // 
+            // PausedLabel
+            // 
+            this.PausedLabel.AutoSize = true;
+            this.PausedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PausedLabel.ForeColor = System.Drawing.Color.Lime;
+            this.PausedLabel.Location = new System.Drawing.Point(584, 225);
+            this.PausedLabel.Name = "PausedLabel";
+            this.PausedLabel.Size = new System.Drawing.Size(186, 46);
+            this.PausedLabel.TabIndex = 4;
+            this.PausedLabel.Text = "PAUSED";
+            // 
             // ScoreTable
             // 
             this.ScoreTable.AutoSize = true;
             this.ScoreTable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ScoreTable.Font = new System.Drawing.Font("LilyUPC", 30F);
+            this.ScoreTable.Font = new System.Drawing.Font("Arial", 30F);
             this.ScoreTable.ForeColor = System.Drawing.Color.Lime;
             this.ScoreTable.Location = new System.Drawing.Point(12, 3);
             this.ScoreTable.Name = "ScoreTable";
-            this.ScoreTable.Size = new System.Drawing.Size(121, 38);
+            this.ScoreTable.Size = new System.Drawing.Size(196, 45);
             this.ScoreTable.TabIndex = 3;
             this.ScoreTable.Text = "SCORE : ";
             // 
@@ -77,7 +103,7 @@
             this.Stick.Multiline = true;
             this.Stick.Name = "Stick";
             this.Stick.ReadOnly = true;
-            this.Stick.Size = new System.Drawing.Size(204, 20);
+            this.Stick.Size = new System.Drawing.Size(0, 0);
             this.Stick.TabIndex = 2;
             this.Stick.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Stick_KeyDown);
             // 
@@ -96,16 +122,16 @@
             this.Time.Interval = 1;
             this.Time.Tick += new System.EventHandler(this.Time_Tick);
             // 
-            // PausedLabel
+            // highScoreLabel
             // 
-            this.PausedLabel.AutoSize = true;
-            this.PausedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PausedLabel.ForeColor = System.Drawing.Color.Lime;
-            this.PausedLabel.Location = new System.Drawing.Point(584, 225);
-            this.PausedLabel.Name = "PausedLabel";
-            this.PausedLabel.Size = new System.Drawing.Size(186, 46);
-            this.PausedLabel.TabIndex = 4;
-            this.PausedLabel.Text = "PAUSED";
+            this.highScoreLabel.AutoSize = true;
+            this.highScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.highScoreLabel.ForeColor = System.Drawing.Color.Lime;
+            this.highScoreLabel.Location = new System.Drawing.Point(12, 48);
+            this.highScoreLabel.Name = "highScoreLabel";
+            this.highScoreLabel.Size = new System.Drawing.Size(306, 46);
+            this.highScoreLabel.TabIndex = 6;
+            this.highScoreLabel.Text = "HIGH SCORE : ";
             // 
             // PONG
             // 
@@ -117,6 +143,7 @@
             this.KeyPreview = true;
             this.Name = "PONG";
             this.Text = "PONG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.Field.ResumeLayout(false);
@@ -137,6 +164,8 @@
         private System.Windows.Forms.Timer Time;
         private System.Windows.Forms.Label ScoreTable;
         private System.Windows.Forms.Label PausedLabel;
+        private System.Windows.Forms.Label GodModeLabel;
+        private System.Windows.Forms.Label highScoreLabel;
     }
 }
 
