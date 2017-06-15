@@ -1,0 +1,9 @@
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\bin\Debug\PingPong.exe.config
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\bin\Debug\PingPong.exe
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\bin\Debug\PingPong.pdb
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\obj\Debug\PingPong.csprojResolveAssemblyReference.cache
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\obj\Debug\PingPong.Form1.resources
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\obj\Debug\PingPong.Properties.Resources.resources
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\obj\Debug\PingPong.csproj.GenerateResource.Cache
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\obj\Debug\PingPong.exe
+c:\users\noncsi\documents\visual studio 2017\Projects\PingPong\PingPong\obj\Debug\PingPong.pdb
